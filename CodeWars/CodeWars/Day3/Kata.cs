@@ -24,13 +24,27 @@
 
             int hour = dateTime.Hour;
             int correctedHour = hour;
-            if (correctedMinute > 0 && (correctedHour != 12 && correctedHour != 6))
+            
+            if (!(correctedMinute == 0 && (correctedHour == 12 || correctedHour == 6)))
             {
-                int hourDirection = hour >= 6  && hour < 12 ? -1 : 1;
-                int onTheHour = correctedMinute == 0 ? 0 : 1;
-                correctedHour = hour + (hourDirection * (onTheHour + ((2 * Math.Abs(hour - 6))-1)));
+                int distanceFrom6 = Math.Abs(hour - 6);
+                int hourAdjustment = 2 * distanceFrom6;
+                bool lessThan6 = hour < 6 || hour == 12;
+
+                if (lessThan6)
+                {
+                    hourAdjustment -= 1;
+                } else
+                {
+                    hourAdjustment += 1;
+                }
+
+                int direction = lessThan6 ? 1 : -1;
+                correctedHour = hour + (direction * hourAdjustment);
 
                 correctedHour = correctedHour == 0 ? 12 : correctedHour;
+                correctedHour = correctedHour > 12 ? correctedHour - 12 : correctedHour;
+                correctedHour = correctedMinute == 0 ? correctedHour + 1 : correctedHour;
             }
 
             return $"{correctedHour:00}:{correctedMinute:00}";
