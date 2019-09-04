@@ -9,7 +9,8 @@ Shit, there's even one that does it in one line!?!
         public static string WhatIsTheTime(string timeInMirror)
         {
                 return DateTime.Parse("12:00").Subtract(TimeSpan.Parse(timeInMirror)).ToString("hh:mm");
-        }```
+        }
+```
 
 Like... what is that? 12:00 - the time? That is so blindingly obvious in retrospect, and frustrating that I've got half a page of scribbles that I overlooked that. Like how does that even work? 
 
