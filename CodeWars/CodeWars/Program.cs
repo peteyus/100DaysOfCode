@@ -1,20 +1,13 @@
-﻿using CodeWars.Day2;
-using System;
-using System.Diagnostics;
-
-namespace CodeWars
+﻿namespace CodeWars
 {
+    using System;
+    using System.Diagnostics;
+
     class Program
     {
         static void Main(string[] args)
         {
-            int[,] board = { { 3, 0, 1 },
-                             { 3, 0, 1 },
-                             { 0, 2, 1 },
-                             { 0, 2, 0 } };
-            int[,] attacks = { { 2, 1 }, { 2, 2 }, { 3, 2 }, { 3, 3 } };
-            var result = Kata.damagedOrSunk(board, attacks);
-
+            var result = CodeWars.Day3.Kata.WhatIsTheTime("05:25");
             Debugger.Break();
 
             Console.WriteLine("This program does nothing.");
