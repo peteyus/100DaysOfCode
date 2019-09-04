@@ -24,10 +24,13 @@
 
             int hour = dateTime.Hour;
             int correctedHour = hour;
-            if (correctedMinute > 0)
+            if (correctedMinute > 0 || (correctedHour != 12 && correctedHour != 6))
             {
                 int hourDirection = hour > 6  && hour < 12 ? -1 : 1;
-                correctedHour = hour - (hourDirection * (1 + (2 * (hour - 6))));
+                int onTheHour = correctedMinute == 0 ? 0 : 1;
+                correctedHour = hour + (hourDirection * (onTheHour + (2 * (hour - 6))));
+
+                correctedHour = correctedHour == 0 ? 12 : correctedHour;
             }
 
             return $"{correctedHour:00}:{correctedMinute:00}";
