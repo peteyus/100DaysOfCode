@@ -7,7 +7,11 @@
     {
         static void Main(string[] args)
         {
-            var result = CodeWars.Day3.Kata.WhatIsTheTime("11:59");
+            Console.WriteLine($"06:35 = {CodeWars.Day3.Kata.WhatIsTheTime("05:25")}");
+            Console.WriteLine($"11:59 = {CodeWars.Day3.Kata.WhatIsTheTime("12:01")}");
+            Console.WriteLine($"11:58 = {CodeWars.Day3.Kata.WhatIsTheTime("12:02")}");
+            Console.WriteLine($"12:00 = {CodeWars.Day3.Kata.WhatIsTheTime("12:00")}");
+            Console.WriteLine($"02:00 = {CodeWars.Day3.Kata.WhatIsTheTime("10:00")}");
             Debugger.Break();
 
             Console.WriteLine("This program does nothing.");

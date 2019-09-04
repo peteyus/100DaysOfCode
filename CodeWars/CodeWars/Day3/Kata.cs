@@ -24,11 +24,11 @@
 
             int hour = dateTime.Hour;
             int correctedHour = hour;
-            if (correctedMinute > 0 || (correctedHour != 12 && correctedHour != 6))
+            if (correctedMinute > 0 && (correctedHour != 12 && correctedHour != 6))
             {
-                int hourDirection = hour > 6  && hour < 12 ? -1 : 1;
+                int hourDirection = hour >= 6  && hour < 12 ? -1 : 1;
                 int onTheHour = correctedMinute == 0 ? 0 : 1;
-                correctedHour = hour + (hourDirection * (onTheHour + (2 * (hour - 6))));
+                correctedHour = hour + (hourDirection * (onTheHour + ((2 * Math.Abs(hour - 6))-1)));
 
                 correctedHour = correctedHour == 0 ? 12 : correctedHour;
             }
