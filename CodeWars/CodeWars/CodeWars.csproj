@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Day4\Kata.cs" />
     <Compile Include="Day2\Kata.cs" />
     <Compile Include="Day3\Kata.cs" />
     <Compile Include="DirectionsReduction\DirReduction.cs" />
@@ -56,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Day3\Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Day4\Readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
