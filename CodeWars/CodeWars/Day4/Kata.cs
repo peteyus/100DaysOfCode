@@ -27,7 +27,7 @@
                 }
             }
 
-            result.Capacity -= 1;
+            result.Length -= 1;
             return result.ToString();
         }
     }
