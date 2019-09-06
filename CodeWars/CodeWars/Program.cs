@@ -7,10 +7,17 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"~{Day4.Kata.PigIt("Pig latin is cool")}~");
-            Console.WriteLine($"~{Day4.Kata.PigIt("This is my string")}~");
-        
-                    Debugger.Break();
+            string[] names = new string[] { "Sheldon", "Leonard", "Penny", "Rajesh", "Howard" };
+            int n = 1;
+            Console.WriteLine(Day5.Line.WhoIsNext(names, n));
+
+
+            names = new string[] { "Sheldon", "Leonard", "Penny", "Rajesh", "Howard" };
+            n = 6;
+            Console.WriteLine(Day5.Line.WhoIsNext(names, n));
+
+
+            Debugger.Break();
 
             Console.WriteLine("This program does nothing.");
         }
