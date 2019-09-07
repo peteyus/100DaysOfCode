@@ -71,3 +71,13 @@ I was using exponential growth, because each iteration is 2^iteration + the numb
 I think I'm too frustrated for this tonight. Tomorrow's project is to figure this crap out and then spend some time learning Unity instead of banging my head against this any more. I'm still missing something mathematical and I'm getting stuck on it. Maybe I'll reach out to the team to see what assumptions I'm making incorrectly?
 
 Stupid logic. Yup. Fuckit.
+
+# Day 5, round 2
+
+If the "first" iteration (only five possibilities) is considered 0, the number of possibilities on any iteration `i` with array length `l` can be expressed as `l * Math.Pow(2, i)`. So while the given target `n` is greater than the sum of each iteration, we iterate. Once we find an iteration larger than `n`, we subtract the total of the previous iteration from `n` and that's the position in line of "this" iteration.
+
+For any given iteration, there are `Math.Pow(2, i)` copies of each name. If we divide `n` by that number, take the integer of `n-1`, that should be the position in line.
+
+I think. Let's go try it out.
+
+Holy hell I think I got it. My answer matches the self-referential function. And is just as fast (return in 0 ms)
