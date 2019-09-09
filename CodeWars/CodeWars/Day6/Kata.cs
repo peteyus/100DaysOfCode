@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace CodeWars.Day6
+﻿namespace CodeWars.Day6
 {
+    using System.Linq;
+
     public class Kata
     {
         public static int[] MoveZeroes(int[] arr)
