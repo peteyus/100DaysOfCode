@@ -47,6 +47,7 @@
     <Compile Include="Day2\Kata.cs" />
     <Compile Include="Day3\Kata.cs" />
     <Compile Include="Day5\Line.cs" />
+    <Compile Include="Day6\Kata.cs" />
     <Compile Include="DirectionsReduction\DirReduction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
