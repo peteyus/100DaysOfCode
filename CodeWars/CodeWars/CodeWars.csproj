@@ -48,6 +48,7 @@
     <Compile Include="Day3\Kata.cs" />
     <Compile Include="Day5\Line.cs" />
     <Compile Include="Day6\Kata.cs" />
+    <Compile Include="Day7\Intervals.cs" />
     <Compile Include="DirectionsReduction\DirReduction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +56,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Day2\Readme.md" />
+    <None Include="Day7\Readme.md" />
     <None Include="DirectionsReduction\Readme.md" />
   </ItemGroup>
   <ItemGroup>
