@@ -1,0 +1,10 @@
+﻿# Day 9
+
+Few things make me want to say "nope" faster than geometry. And yet here we are.
+
+I think what's most frustrating is there are people commenting "Oh, so easy" and "this should be a 7kyu". Then why the hell is it a 4, and what am I not seeing?
+
+I can, of course, reveal the answer. But that's not going to solve anything for me.
+
+I've tried looking up the theory. I found out the math for calculating the new points after rotation (thanks wikipedia!). So then what? The comments all say the brute-force approach ("is this point in the polygon") won't work. Which makes sense, I need to find a more efficient way. But I don't even know where to begin on this.
+

@@ -50,6 +50,7 @@
     <Compile Include="Day6\Kata.cs" />
     <Compile Include="Day7\Intervals.cs" />
     <Compile Include="Day8\Kata.cs" />
+    <Compile Include="Day9\Kata.cs" />
     <Compile Include="DirectionsReduction\DirReduction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Day6\Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Day9\TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
