@@ -75,7 +75,7 @@
     <None Include="Day6\Readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Day9\TextFile1.txt" />
+    <None Include="Day9\Readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
