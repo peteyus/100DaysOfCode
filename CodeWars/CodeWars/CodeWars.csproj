@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Day10\Kata.cs" />
+    <Compile Include="Day11\Kata.cs" />
     <Compile Include="Day4\Kata.cs" />
     <Compile Include="Day2\Kata.cs" />
     <Compile Include="Day3\Kata.cs" />
@@ -58,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Day11\Readme.md" />
     <None Include="Day2\Readme.md" />
     <None Include="Day7\Readme.md" />
     <None Include="Day8\Readme.md" />
