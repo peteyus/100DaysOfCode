@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Day10\Kata.cs" />
     <Compile Include="Day11\Kata.cs" />
+    <Compile Include="Day12\Connect4.cs" />
     <Compile Include="Day4\Kata.cs" />
     <Compile Include="Day2\Kata.cs" />
     <Compile Include="Day3\Kata.cs" />
@@ -83,5 +84,6 @@
   <ItemGroup>
     <None Include="Day10\Readme.md" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
