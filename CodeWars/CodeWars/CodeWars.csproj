@@ -61,6 +61,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Day11\Readme.md" />
+    <None Include="Day12\Readme.md" />
     <None Include="Day2\Readme.md" />
     <None Include="Day7\Readme.md" />
     <None Include="Day8\Readme.md" />

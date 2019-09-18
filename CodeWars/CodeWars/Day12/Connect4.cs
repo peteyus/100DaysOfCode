@@ -19,6 +19,8 @@
  * The columns are numbered 0-6 left to right.
  */
 
+using System.Runtime.InteropServices;
+
 namespace CodeWars.Day12
 {
 
@@ -36,7 +38,7 @@ namespace CodeWars.Day12
             this.gameBoard = new List<List<int>>(7);
             for (int i = 0; i < 7; i++)
             {
-                this.gameBoard[i] = new List<int>(6);
+                this.gameBoard.Add(new List<int> {0, 0,0,0,0,0});
             }
         }
 
@@ -75,7 +77,7 @@ namespace CodeWars.Day12
         private bool HasPlayerWon(int player, int col, int row)
         {
             int count = 0;
-            for (int i = 0; i < this.gameBoard[col].Count; i++)
+            for (int i = 0; i < this.gameBoard[col].Count && count < 4; i++)
             {
                 if (this.gameBoard[col][i] == player)
                 {
@@ -91,7 +93,9 @@ namespace CodeWars.Day12
                 return true;
             }
 
-            for (int i = 0; i < this.gameBoard.Count; i++)
+            count = 0;
+
+            for (int i = 0; i < this.gameBoard.Count && count < 4; i++)
             {
                 if (this.gameBoard[i][row] == player)
                 {
@@ -107,7 +111,34 @@ namespace CodeWars.Day12
                 return true;
             }
 
-            // diagonal?
+            count = 0;
+
+            for (int i = -6; i < 7; i++)
+            {
+                if (col + i < 0 || col + i > 6)
+                {
+                    continue;
+                }
+
+                if (row + i < 0 || row + i > 5)
+                {
+                    continue;
+                }
+
+                if (this.gameBoard[col + i][row + i] == player)
+                {
+                    count++;
+                    continue;
+                }
+
+                count = 0;
+            }
+
+
+            if (count >= 4)
+            {
+                return true;
+            }
 
             return false;
         }
