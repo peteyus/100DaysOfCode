@@ -36,5 +36,12 @@ namespace CodeWarsUnitTests
         {
             Assert.AreEqual("[]", Dioph.solEquaStr(1));
         }
+
+        [TestMethod]
+        public void TenThousand()
+        {
+            Assert.AreEqual("[[12502, 6249], [6254, 3123], [2510, 1245], [1270, 615], [550, 225], [350, 75]]",
+                Dioph.solEquaStr(100000));
+        }
     }
 }

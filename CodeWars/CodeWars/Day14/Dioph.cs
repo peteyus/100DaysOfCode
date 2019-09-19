@@ -17,7 +17,7 @@ namespace CodeWars.Day14
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Security.Cryptography.X509Certificates;
+    using System.Runtime.Serialization.Formatters;
 
     public class Dioph
     {
@@ -25,18 +25,38 @@ namespace CodeWars.Day14
         {
             List<(int, int)> validPairs = new List<(int, int)>();
 
+            // brute force
             for (int x = 0; x < n; x++)
             {
                 for (int y = 0; y < n; y++)
                 {
-                    if ((long) Math.Pow(x, 2) - (4 * (long) Math.Pow(y, 2)) == n)
+                    if (x - 2 * y <= 0 || x + 2 * y <= 0)
+                    {
+                        continue;
+                    }
+
+                    if ((long)Math.Pow(x, 2) - (4 * (long)Math.Pow(y, 2)) == n)
                     {
                         validPairs.Add((x, y));
                     }
                 }
             }
 
-            string pairs = $"{string.Join(", ", validPairs.Select(pair => $"[{pair.Item1}, {pair.Item2}]"))}";
+            // hint: (x - 2*y) * (x + 2*y). So both must be a factor of N.
+            //for (int x = 0; x < n; x++)
+            //{
+            //    for (int y = 0; y < n; y++)
+            //    {
+
+            //        if (n % (x - 2 * y) == 0 && n % (x + 2 * y) == 0)
+            //        {
+            //            validPairs.Add((x, y));
+            //        }
+            //    }
+            //}
+
+            string pairs =
+                $"{string.Join(", ", validPairs.OrderByDescending(pair => pair.Item1).Select(pair => $"[{pair.Item1}, {pair.Item2}]"))}";
             return $"[{pairs}]";
         }
     }
