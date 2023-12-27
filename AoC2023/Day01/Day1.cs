@@ -17,7 +17,7 @@
 
         public int ProcessPartOneInput()
         {
-            string expectedInputFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty, "Day1", "input.txt");
+            string expectedInputFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty, "Day01", "input.txt");
             if (!File.Exists(expectedInputFile))
             {
                 throw new Exception("Could not find input file.");
@@ -53,7 +53,7 @@
                 return totalValue;
             }
 
-            string expectedInputFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty, "Day1", "input.txt");
+            string expectedInputFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty, "Day01", "input.txt");
             if (!File.Exists(expectedInputFile))
             {
                 throw new Exception("Could not find input file.");

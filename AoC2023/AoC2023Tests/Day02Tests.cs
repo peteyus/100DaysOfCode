@@ -9,12 +9,12 @@
     using System.Threading.Tasks;
 
     [TestClass]
-    public class Day2Tests
+    public class Day02Tests
     {
         private Day2 classUnderTest = new Day2();
 
         [TestClass]
-        public class PartOne : Day2Tests
+        public class PartOne : Day02Tests
         {
             [TestMethod]
             public void ProcessesLineAsExpected()
@@ -66,7 +66,7 @@ Game 10: 1 red, 16 green, 3 blue; 1 red, 3 blue; 6 green; 4 green, 2 blue, 1 red
         }
 
         [TestClass]
-        public class PartTwo : Day2Tests
+        public class PartTwo : Day02Tests
         {
             [TestMethod]
             public void ProccessesSingleGameAsExpected()

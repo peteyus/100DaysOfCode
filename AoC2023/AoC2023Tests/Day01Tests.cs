@@ -4,12 +4,12 @@ namespace AoC2023Tests
     using System.Diagnostics;
 
     [TestClass]
-    public class Day1Tests
+    public class Day01Tests
     {
         private Day1 classUnderTest = new Day1();
 
         [TestClass]
-        public class Part1ProcessLineTests : Day1Tests
+        public class Part1ProcessLineTests : Day01Tests
         {
             [TestMethod]
             public void ProcessesFirstAndLastDigitOfLine()
@@ -20,7 +20,7 @@ namespace AoC2023Tests
         }
 
         [TestClass]
-        public class Part1InputTests : Day1Tests
+        public class Part1InputTests : Day01Tests
         {
             [TestMethod]
             public void ProcessInputPartOne()
@@ -32,7 +32,7 @@ namespace AoC2023Tests
         }
 
         [TestClass]
-        public class Part2ProcessLineTests : Day1Tests
+        public class Part2ProcessLineTests : Day01Tests
         {
             [TestMethod]
             public void ProcessesFirstAndLastDigitOfLineAsString()
@@ -62,7 +62,7 @@ namespace AoC2023Tests
         }
 
         [TestClass]
-        public class Part2InputTests : Day1Tests
+        public class Part2InputTests : Day01Tests
         {
             [TestMethod]
             public void ProcessInputPartTwo()

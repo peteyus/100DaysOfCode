@@ -91,7 +91,7 @@
 
         private string ReadInputFromFile()
         {
-            string expectedInputFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty, "Day2", "input.txt");
+            string expectedInputFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty, "Day02", "input.txt");
             if (!File.Exists(expectedInputFile))
             {
                 throw new Exception("Could not find input file.");
